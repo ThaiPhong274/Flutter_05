@@ -1,11 +1,128 @@
-import 'package:flutter_application_1/Student.dart';
+import 'dart:io';
+
+import 'package:flutter_application_1/Bank_account.dart';
 
 void main() {
-  final Minh = Student('Minh','M01','000');
-  Minh.name;
-  print(Minh.name);
+  // var newAcc = BankAccout(001, 'Nguyen', 500000);
+  // print(newAcc.checkBalance);
+  // newAcc.withdraw(10000);
+  // print(newAcc.checkBalance);
+
+  List<Hocsinh> lisths = [];
+  Hocsinh HocsinhA = Hocsinh('123','Hoa',18,22);
+  lisths.add(HocsinhA);
+  getAllHocsinh(lisths);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Du lieu BT1
+
+//BT1
+// List<Hocsinh> lisths = [];
+//Cach1
+//     while (true) {
+//         print('\n===== QUẢN LÝ SINH VIÊN =====');
+//         print('1. Thêm sinh viên');
+//         print('2. Hiển thị danh sách');
+//         print('3. Tìm sinh viên theo ID');
+//         print('0. Thoát');
+//     int choice = int.parse(stdin.readLineSync()!);
+//     switch (choice) {
+//       case 1:
+//         Hocsinh st = Hocsinh();
+//         st.input();
+//         lisths.add(st);
+//         break;
+//       case 2:
+//         for (var st in lisths) {
+//           st.display();
+//         }
+//         break;
+//       case 3:
+//         print('Nhập ID cần tìm:');
+//         String searchId = stdin.readLineSync()!;
+//         for (var st in lisths) {
+//           if (st.id == searchId) {
+//             st.display();
+//           }
+//         }
+//         break;
+//       case 0:
+//         return;
+//       default:
+//         print('Lựa chọn không hợp lệ');
+//     }
+//   }
+//Cach 1
+// class Hocsinh{
+//   String id = '';
+//   String tenhs = '';
+//   int age = 0;
+//   double grade = 0;
+//   void input(){
+//     print('Nhap vao id hoc sinh: ');
+//     id = stdin.readLineSync()!;
+//     print('Nhap vao ho ten hoc sinh: ');
+//     tenhs = stdin.readLineSync()!;
+//     print('Nhap vao tuoi hoc sinh: ');
+//     age = int.parse(stdin.readLineSync()!);
+//     print('Nhap vao diem trung binh: ');
+//     grade = double.parse(stdin.readLineSync()!);    
+//   }
+//   void display(){
+//     print('ID hoc sinh: $id');
+//     print('Ho ten hoc sinh: $tenhs');
+//     print('Tuoi hoc sinh: $age');
+//     print('Diem trung binh: $grade');
+//   }
+// }
+
+//Cach 2
+
+
+class Hocsinh{
+  String id,tenhs;
+  int age,grade;
+  Hocsinh(this.id,this.tenhs,this.age,this.grade);
+  void introduce(){
+    print('Sinh vien co ten la $tenhs dang hoc lop $grade');
+  }
+}
+void getAllHocsinh(List<Hocsinh> hs){
+  for (var hs in hs){
+ (hs.introduce());
+ }
+  }
+
+Hocsinh? findHocsinhById(List<Hocsinh> hs,String id){
+  for (var hs in hs){
+    if(hs.id == id){
+      return hs;
+    }
+  }
+  return null;
+}
 
 
 
