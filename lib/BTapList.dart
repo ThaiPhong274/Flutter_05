@@ -2,20 +2,20 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  //List 1
-    // List<dynamic> nums = [1,2,3,4,5,'6',5];
-    // print(nums);
+  // List 1
+    List<dynamic> nums = [1,2,3,4,5,'6',5];
+    print(nums);
 
-    // Set<dynamic> nums1 = {1,2,3,4,5,'6',5};
-    // print(nums1);
+    Set<dynamic> nums1 = {1,2,3,4,5,'6',5};
+    print(nums1);
 
-    // Map<String, dynamic> userA = {
-    //   'name': 'Nguyen',
-    //   'age': 18
-    // };
-    // print(userA);
-    // print(userA['name']);
-
+    Map<String, dynamic> userA = {
+      'name': 'Nguyen',
+      'age': 18
+    };
+    print(userA);
+    print(userA['name']);
+}
 //.................................................................
   //List 2 thêm xoá list
     // List<int> nums = [];
@@ -159,15 +159,15 @@ void main() {
 // print(reusult);
 
 //BT5
-var n = 1234;
-var s = n.toString();
-int i = s.length - 1;
-var listResutl = [];
+// var n = 1234;
+// var s = n.toString();
+// int i = s.length - 1;
+// var listResutl = [];
 
-  while(i>=0){
-    listResutl.add(s[i]);
-    i--; 
-  }
+//   while(i>=0){
+//     listResutl.add(s[i]);
+//     i--; 
+//   }
 
-  print(listResutl);
-}
+//   print(listResutl);
+// }
